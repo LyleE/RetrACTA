@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="retracta/wikistyle.css">
+   <link rel="stylesheet" type="text/css" href="retracta/stylesheet.css">
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   <script type="text/javascript" src="retracta/jquery.tools.min.js"></script>
+   <script type="text/javascript" src="retracta/wikitools.js"></script>
+   <script type="text/javascript" src="retracta/wikimagic.js"></script>
+   <title>RetrACTA ~ Censorship Dash!</title>
+   <!-- Got some Analytics up in this bitch -->
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29768643-1']);
+      _gaq.push(['_setDomainName', '1y1e.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+   <div id="header">
+      <div id="statusTargetBox">
+         <span id="statusContainer">
+            <span id="status"></span>
+            <img id="spinner" src="retracta/img/ajax-loader.gif" />
+         </span>
+         <span id="targetContainer">
+            <b>Target Article: </b><span id="target"></span>
+         </span>
+         <span id="targetNote">[Hover for summary]</span>
+      </div>
+      <div id="targetTooltip" class="tooltip"></div>
+      
+      <div id="help">
+         <div id="hints">Need help?</div>
+         <div id="scrollToTop"><a href="#" onclick="scrollToTop();return false;">^</a></div>
+      </div>
+      
+      <div id="timer">
+         <span id="timerCount"></span>
+         <span id="timerLabel"></span>
+      </div>
+   </div>
+      
+   <div id="content">
+      <div id="resultContainer" class="white wispy">
+         <h1 id="resultTitle"></h1>
+         <div id="result" onselectstart='return false;' ></div>
+      </div>
+   </div>
+   
+   <!--
+      <div id="debug" style="z-index:999999999;position: fixed; bottom: 0;right: 0; background: blue; padding: 5px;">
+      <input id="article_title" type="text" value="Obama" />
+      <input type="submit" onclick="loadWikiPage( $('#article_title').val() );" value="Go!" />
+      <input type="submit" onclick="loadRandomWikiPage();" value="Random" />
+      <input type="submit" onclick="testFlashUp();" value="Countdown!" />
+      <input type="submit" onclick="console.log($.getJSON('http://en.wikipedia.org/w/api.php?action=parse&prop=text&redirects&format=json&callback=?'+$('#article_title').val(), function(r) {console.log(r);});" value="getWiki JSON" />
+   </div>
+   -->
+   
+   <div id="intro" class="wispyContainer">
+      <div id="intro-inner" class="white wispy">
+         <img title="RetrACTA - Race against Censorship" src="retracta/img/retrACTA.png"></img>
+         <br />
+         <img id="censorshipScreenshot" src="retracta/img/wiki_censored.gif" style="float:right;"></img>
+         <div id="wallOfText">
+            <p>With legislation like ACTA, soon there may be a time in which <b>corporations can censor the Internet</b> under the guise of copyright and intellectual property protection. In this simulation, you'll have to <b>negotiate Wikipedia while it is in the process of being censored</b>!</p>
+            <p><b>Choose a target article</b> below, then try and find it by navigating from a <b>random</b> Wiki article as quickly as you can.</p>
+            <p>Don't hang around, you have <b>less than a minute before complete censorship</b> of each page! The faster and more direct your route, the more <b>Internet points</b> you'll get! <b>Bonus points</b> can be earned by clicking red links; they also <b>pause any censorship</b> on that page for a short time!</p>
+         </div>
+         <div class="clear"></div>
+         <div id="targetChoices">
+         Choose well:
+            <ul>
+               <li id="targetChoice0" class="hasTooltip"><a href="#"></a></li>
+                  <span id="targetChoiceTooltip0" class="tooltip"></span>
+               <li id="targetChoice1" class="hasTooltip"><a href="#"></a></li>
+                  <div id="targetChoiceTooltip1" class="tooltip"></div>
+               <li id="targetChoice2" class="hasTooltip"><a href="#"></a></li>
+                  <div id="targetChoiceTooltip2" class="tooltip"></div>
+               <li id="targetChoice3" class="hasTooltip"><a href="#"></a></li>
+                  <div id="targetChoiceTooltip3" class="tooltip"></div>
+            </ul>
+         </div>
+         <br />
+         <h1 id="startGame"><a href="#" onclick="startGame();return false;">Start!</a></h1><br />
+      </div>
+   </div>
+   
+   <div id="gameOver" class="wispyContainer">
+      <div id="gameOver-inner" class="black wispy">
+         <div id="gameOver-content">
+            <h1 id="gameOver-title"></h1>
+            <h3 id="gameOver-subTitle"></h3>
+            <div class="gameOver-win">
+               <ul id="statsList"></ul>
+            </div>
+            <div id="gameOver-score"></div>
+            <h2>
+               <span id="gameOver-tweet"></span>
+               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+               <a href="#" onclick="playAgain();return false;">Play Again?</a>
+            </h2>
+            <div id="gameOver-path" class="gameOver-win"></div>
+         </div>
+      </div>
+   </div>
+   
+   <div id="flashy"></div>
+</body>
+</html>

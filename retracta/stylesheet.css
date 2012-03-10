@@ -1,0 +1,300 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.wispyContainer {
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 2000;
+    padding: 0;
+    margin: 0;
+}
+
+.wispy {
+    position: relative;
+    top: 0;
+    bottom:0;
+    left: 50%;
+    min-height:100%;
+	margin-left: -475px;
+    display: block;
+    padding: 0 75px;
+    width: 800px;
+}
+
+.white.wispy {
+    background: white url('img/wispy_white_background.png') top center repeat-y;
+    color: black;
+}
+
+.black.wispy {
+    background: black url('img/wispy_black_background.png') top center repeat-y;
+    color: white;
+}
+
+#intro-inner, #gameOver-inner {
+    text-align: center;
+}
+
+#intro h1, h1#resultTitle, #gameOver h1 {
+    padding: 1em 0 0 0;
+    margin: 0;
+}
+
+#wallOfText {
+    text-align: justify;
+}
+
+#header {
+    display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+    font-size:25px;
+    height:81px;
+	width: 100%;
+    min-width: 800px;
+    width:expression(document.body.clientWidth < 800? "800px": "auto" );
+	background: black;
+    color: white;
+    z-index: 1000;
+}
+
+img#spinner {
+    display:none;
+}
+
+img#censorshipScreenshot {
+    float: right;
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+#statusTargetBox {
+    position: relative;
+    width: 440px;
+    height: 80px;
+    float:left;
+    overflow: hidden;
+}
+
+#statusContainer {
+    position: absolute;
+    top: 0;
+    bottom: 60%;
+    left: 0;
+    right:0;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+#targetContainer {
+    position: absolute;
+    top: 45%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+#targetNote {
+    position: absolute;
+    bottom:0;
+    right: 10px;
+    font-size: 12px;
+}
+
+#help {
+    display: none;
+    position: relative;
+    float:right;
+    width:150px;
+    margin-right:20px;
+}
+
+
+#scrollToTop {
+    position: absolute;
+    right: 0;
+    top: -7px;
+}
+
+#scrollToTop a:link, #scrollToTop a:visited, #scrollToTop a:hover {
+    text-decoration: none;
+    font-size:50px;
+    color: white;
+}
+
+#timer {
+    position:absolute;
+    left: 62%;
+    top:0.5em;
+    margin-left: -110px;
+    display: block;
+    text-align:center;
+    font-size:24px;
+    width:220px;
+    height:2.3em;
+}
+
+.red {
+    color: red;
+}
+
+.bonus, .bonus a {
+    color: white;
+    background-color: red;
+}
+
+#content {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+
+#resultContainer  {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    min-height: 100%;
+}
+
+#result, #resultTitle  {
+    display: none;
+}
+
+#result a:link, #result a:visited {
+    color: blue;
+}
+
+#result span.forbidden {
+    color: purple;
+}
+
+#result span.censored {
+    color: black;
+    background-color: black;
+}
+
+#result span.greyout {
+    color: grey;
+}
+
+#targetChoices {
+    display: block;
+    width: 650px;
+    margin: 0 auto;
+}
+
+#targetChoices ul {
+    display: inline;
+    width:600px;
+    padding-left: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    line-height: 2em;
+}
+
+h1#startGame {
+    display: none;
+    width: 100px;
+    margin: 0 auto;
+    padding: 5px;
+    background:red;
+}
+
+h1#startGame a {
+    color:black;
+}
+
+#targetTooltip {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    font-size: 16px;
+	padding: 0px 20px 10px;
+    text-align: justify;
+    height: 200px;
+	width: 300px;
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+    line-height: 1em;
+    overflow-y: auto;
+}
+
+#targetChoices ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+#targetChoices ul a {
+    padding: 3px 10px;
+    display:none;
+    white-space:nowrap;
+}
+
+#targetChoices ul a:link, #targetChoices ul a:visited {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+#targetChoices ul a.selected {
+    background:red;
+    color:black;
+}
+
+#targetChoices ul a:hover {
+    color: black;
+    background-color: darkgrey;
+    text-decoration: none;
+}
+
+#flashy {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -1ex;
+    text-align:center;
+    z-index: 2500;
+}
+
+#gameOver {
+    display: none;
+    background-color: white;
+}
+
+#gameOver-content a:link, #gameOver-content a:visited, #gameOver-content a:hover {
+    color: white;
+}
+
+#gameOver-winStats {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#statsList li {
+    text-align: left;
+}
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
