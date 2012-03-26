@@ -54,6 +54,13 @@ li {
     text-align: justify;
 }
 
+.social {
+    display: block;
+    width: 446px;
+    height: 40px;
+    padding: 10px;
+}
+
 #header {
     display: none;
 	position: absolute;
@@ -63,7 +70,7 @@ li {
     height:81px;
 	width: 100%;
     min-width: 800px;
-    width:expression(document.body.clientWidth < 800? "800px": "auto" );
+    width: expression(document.body.clientWidth < 800? "800px": "auto" );
 	background: black;
     color: white;
     z-index: 1000;
@@ -284,6 +291,12 @@ h1#startGame a {
 
 #gameOver-content a:link, #gameOver-content a:visited, #gameOver-content a:hover {
     color: white;
+}
+
+#gameOver-content .social {
+    margin: 0 auto;
+    width: 550px;
+    height: auto;
 }
 
 #gameOver-winStats {

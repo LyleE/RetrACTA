@@ -3,8 +3,16 @@
 <head>
    <link rel="stylesheet" type="text/css" href="retracta/wikistyle.css">
    <link rel="stylesheet" type="text/css" href="retracta/stylesheet.css">
+   
+   <meta property="og:title" content="RetrACTA"/> 
+   <meta property="og:type" content="game"/> 
+   <meta property="og:image" content="http://www.1y1e.com/games/retracta/img/wiki_censored.gif"/> 
+   <meta property="og:url" content="http://1y1e.com/retracta"/> 
+   <meta property="og:site_name" content="1y1e.com"/> 
+   <meta property="fb:admins" content="699081180"/> 
+   
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-   <script type="text/javascript" src="retracta/jquery.tools.min.js"></script>
+   <script type="text/javascript" src="tools/jquery.tools.min.js"></script>
    <script type="text/javascript" src="retracta/wikitools.js"></script>
    <script type="text/javascript" src="retracta/wikimagic.js"></script>
    <title>RetrACTA ~ Censorship Dash!</title>
@@ -23,6 +31,16 @@
     </script>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=6430124381";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
    <div id="header">
       <div id="statusTargetBox">
          <span id="statusContainer">
@@ -68,7 +86,14 @@
       <div id="intro-inner" class="white wispy">
          <img title="RetrACTA - Race against Censorship" src="retracta/img/retrACTA.png"></img>
          <br />
-         <img id="censorshipScreenshot" src="retracta/img/wiki_censored.gif" style="float:right;"></img>
+         <img id="censorshipScreenshot" src="retracta/img/wiki_censored.gif"></img>
+         <div class="social right">
+            <div class="twitter left">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://1y1e.com/retracta" data-text="I've been playing RetrACTA: Racing through Wikipedia avoiding censorship!" data-size="large" data-related="1y1e" data-hashtags="retrACTA">Tweet</a>
+            </div>
+
+            <div class="fb-like right" data-href="http://1y1e.com/retracta" data-send="true" data-width="300" data-show-faces="false" data-colorscheme="light"></div>
+         </div>
          <div id="wallOfText">
             <p>With legislation like ACTA, soon there may be a time in which <b>corporations can censor the Internet</b> under the guise of copyright and intellectual property protection. In this simulation, you'll have to <b>negotiate Wikipedia while it is in the process of being censored</b>!</p>
             <p><b>Choose a target article</b> below, then try and find it by navigating from a <b>random</b> Wiki article as quickly as you can.</p>
@@ -103,15 +128,26 @@
             </div>
             <div id="gameOver-score"></div>
             <h2>
-               <span id="gameOver-tweet"></span>
+               <span id="gameOver-tweet">
+                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://1y1e.com/retracta" data-text="I've been playing RetrACTA: Racing through Wikipedia avoiding censorship!" data-size="large" data-related="1y1e" data-hashtags="retrACTA">Tweet</a>
+               </span>
                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                <a href="#" onclick="playAgain();return false;">Play Again?</a>
             </h2>
+
+            <div class="social">
+                <div class="fb-like" data-href="http://1y1e.com/retracta" data-send="true" data-width="300" data-colorscheme="dark" data-show-faces="false"></div>
+                <div class="clear"></div>
+            </div>
+            
             <div id="gameOver-path" class="gameOver-win"></div>
+            
          </div>
       </div>
    </div>
    
    <div id="flashy"></div>
+   
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")</script>
 </body>
 </html>
