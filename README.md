@@ -4,12 +4,9 @@ Most of the game logic meat can be found in wikimagic.js, extra useful tools in 
 
 Contents
 ----------
-retracta.html
-    The game itself!
-/retracta
-    Stylesheets and javascript
-/retracta/img
-    Images and backgrounds
+_retracta.html_ : The game itself!  
+_/retracta_ : Stylesheets and javascript  
+_/retracta/img_ : Images and backgrounds  
     
 MIT License
 ----------
